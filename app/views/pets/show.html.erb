@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pet.name %> the <%= @pet.species %>
+</p>
+
+<%# <p> %>
+  <%# <strong>Species:</strong>
+ 
+</p> %>
+
+<p>
+  <strong>Year of birth:</strong>
+  <%= Time.now.year - @pet.year_of_birth %>
+</p>
+
+<p>
+  <strong>Good with kids:</strong>
+  <%= @pet.good_with_kids ? "Good with children" : "Prefers a home without children" %>
+</p>
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>
+<%# pets_path == /pets %>
